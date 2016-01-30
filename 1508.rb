@@ -6,7 +6,7 @@ def run
   while !group[:students].empty?
     group = test_group(group, count)
   end
-  output group[:pairs].each{|g| output g; output "\n"}
+  group[:pairs].each{|g| output ' * ' + g.join(' & ') + "\n"}
 end
 
 def test_group(group, count)
